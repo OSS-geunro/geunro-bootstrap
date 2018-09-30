@@ -1,21 +1,63 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>main</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="main.css">
+<!doctype html>
+<html lang="en">
 
-    </head>
-    <body>
-        <center><div class="top" id="main-top"><h1 style="color: black">프로젝트명 아이디어 받아요...</h1></div></center>
-        <nav>
-            <ul>
-                <li><a href="main.html">Main</a></li>
-                <li><a href="general.html">일반 근로</a></li>
-                <li><a href="national.html">국가 근로</a></li>
-                <li><a href="helper.html">헬퍼</a></li>
-                <li><a href="maker.html">시간표 제작</a></li>
-            </ul>
-        </nav>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  
+  <link href="./main.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- 상단바 -->
+  <nav id="topnav" class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap">
+    <a class="navbar-brand col-12" href="#">프로젝트명 아이디어 받아요...</a>
+    <ul class="navbar-nav px-3">
+      
+    </ul>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      
+      <!-- 사이드바 -->
+      <nav class="col-2 bg-light sidebar border-right">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column"><li class="nav-item">
+              <a class="nav-link active" href="#">Main</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./general.html">일반 근로</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./national.html">국가 근로</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./helper.html">헬퍼</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./maker.html">시간표 제작</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- 내용 -->
+      <main role="main" class="col-10 ml-auto">
+        <h1>Title</h1>
+        <text>Contents</text>
+      </main>
+    </div>
+  </div>
+
+<!-- 스크립트 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.min.js"></script>
+
+</body>
+
 </html>

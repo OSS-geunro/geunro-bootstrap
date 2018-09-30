@@ -1,19 +1,49 @@
-ul{
-                list-style-type: none;
-                margin-bottom: 500px;
-                margin-left: 0px; 
-                padding: 0;
-                width: 200px;
-                background-color: lightgray;
-                float: left;
-            }
-            li a{
-                display: block;
-                color: black;
-                padding: 8px 0 8px 16px;
-                text-decoration: none;
-            }
-            li a:hover{
-                background-color: black;
-                color: lightgray;
-            }
+body {
+  font-size: 0.9rem;
+}
+
+.active {
+  font-weight: bold;
+}
+
+/* 네비게이션 */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* 상단바 뒤로 */
+  padding: 48px 0 0; /* 상단바 높이 */
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px); /* 전체 창 크기 - 상단 바 높이 */
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.nav-link {
+  color: black;
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  .sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+/* 내용 */
+
+main {
+  padding-top: calc(48px + 1rem); /* 상단바 높이 */
+  padding-left: 1rem;
+}
+
+#topnav {
+  height:48px;
+}
