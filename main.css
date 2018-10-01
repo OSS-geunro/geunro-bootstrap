@@ -39,11 +39,19 @@ body {
 
 /* 내용 */
 
-main {
+#content {
   padding-top: calc(48px + 1rem); /* 상단바 높이 */
   padding-left: 1rem;
 }
 
 #topnav {
-  height:48px;
+  height: 48px;
+}
+
+.fc-time-grid .fc-slats td {
+  height: 1rem ;
+}
+.fc-slats tr {
+  font-size: 0.7rem;
+  height: 1rem;
 }
