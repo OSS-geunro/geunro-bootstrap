@@ -1,5 +1,6 @@
 body {
-  font-size: 0.9rem;
+  font-family: 'Yeon Sung', cursive;
+  font-size: 1.4rem;
 }
 
 .active {
@@ -54,4 +55,7 @@ body {
 .fc-slats tr {
   font-size: 0.7rem;
   height: 1rem;
+}
+.mid-title{
+    font-size: 1.3rem;
 }
