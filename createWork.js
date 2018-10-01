@@ -1,13 +1,6 @@
 var data;
-// {
-//   title: '업무 이름',
-//   start: '2015-03-17T13:13:55-0400',
-//   end: '2015-03-19T13:13:55-0400'
-// }
 
 $(document).ready(function() {
-  // page is now ready, initialize the calendar...
-
   $("#calendar").fullCalendar({
     defaultView: "agendaWeek",
     allDaySlot: false,
@@ -28,27 +21,35 @@ $(document).ready(function() {
     select: function(startTime, endTime) {
       var start = startTime.format("dddd hh:mm");
       var end = endTime.format("dddd hh:mm");
-
       $("#start-time").text(start.toString());
       $("#end-time").text(end.toString());
-      
-      $('#addModal').modal('show');
-
-      $('#submit').on('click',function(){
-          var Title = $('#work-name').val();
-          var Event = {
-            title: Title,
-            minimum:123131,
-            start:startTime, 
-            end:endTime
-          };
-          $('#calendar').fullCalendar('renderEvent', Event);
-          $('#submit').unbind('click');
-          $('#work-name').val("");
-          $('#addModal').modal('hide');
+      $("#addModal").modal("show");
+      $("#submit").on("click", function() {
+      var Title = $("#work-name").val();
+        var Minimum = $("#minimum").val();
+        var Event = {
+          title: Title,
+          minimum: Minimum,
+          start: startTime,
+          end: endTime
+        };
+        $("#calendar").fullCalendar("renderEvent", Event);
+        $("#submit").unbind("click");
+        $("#work-name").val("업무");
+        $("#minimum").val(1);
+        $("#addModal").modal("hide");
       });
     },
 
-
+    eventClick: function(eventObj) {
+      $("#deleteModal").modal("show");
+      $("#delete").on("click", function() {
+        $("#calendar").fullCalendar("removeEvents", eventObj._id);
+        $("#delete").unbind("click");
+        $("#deleteModal").modal("hide");
+      });
+    }
   });
 });
+
+// TODO: 서버연동
