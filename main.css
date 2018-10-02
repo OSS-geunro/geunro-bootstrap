@@ -43,6 +43,7 @@ body {
 #content {
   padding-top: calc(48px + 1rem); /* 상단바 높이 */
   padding-left: 1rem;
+  padding-bottom: 1rem;
 }
 
 #topnav {

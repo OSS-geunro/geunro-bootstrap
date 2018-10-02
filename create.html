@@ -8,8 +8,6 @@
 
   <link rel="stylesheet" href="https://fullcalendar.io/releases/fullcalendar/3.9.0/fullcalendar.min.css">
 
-
-
   <link href="./main.css" rel="stylesheet">
 </head>
 
@@ -17,14 +15,11 @@
   <!-- 상단바 -->
   <nav id="topnav" class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap">
     <a class="navbar-brand col-12" href="#">프로젝트명 아이디어 받아요...</a>
-    <ul class="navbar-nav px-3">
-
-    </ul>
+    <ul class="navbar-nav px-3"></ul>
   </nav>
 
   <div class="container-fluid">
     <div class="row">
-
       <!-- 사이드바 -->
       <nav class="col-2 bg-light sidebar border-right">
         <div class="sidebar-sticky">
@@ -54,6 +49,7 @@
       <!-- 내용 -->
       <main role="main" id="content" class="col-10 ml-auto">
         <h1>Title</h1>
+        <button id="save" type="submit" class="btn btn-primary">저장</button>
         <div id='calendar'></div>
       </main>
     </div>
@@ -91,7 +87,7 @@
         </div>
         <div class="modal-footer">
           <button type="submit" class="cancle btn btn-secondary" data-dismiss="modal">취소</button>
-          <button id="submit" type="submit" class="btn btn-primary">추가</button>
+          <button id="add" type="submit" class="btn btn-primary">추가</button>
         </div>
       </div>
     </div>
@@ -117,6 +113,32 @@
         <div class="modal-footer">
           <button type="button" class="cancle btn btn-secondary" data-dismiss="modal">취소</button>
           <button id="delete" type="submit" class="btn btn-danger btn-primary">삭제</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 시간표 등록창 -->
+  <div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="submitModalLabel">근로 시간표 등록</h5>
+          <button type="button" class="cancle close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="work-name" class="col-form-label">시간표 이름:</label>
+              <input type="text" value="시간표" name="table-name" class="form-control" id="table_name">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="cancle btn btn-secondary" data-dismiss="modal">취소</button>
+          <button id="submit" type="submit" class="btn btn-primary">등록</button>
         </div>
       </div>
     </div>
