@@ -25,7 +25,7 @@ $(document).ready(function() {
       $("#end-time").text(end.toString());
       $("#addModal").modal("show");
       $("#submit").on("click", function() {
-      var Title = $("#work-name").val();
+        var Title = $("#work-name").val();
         var Minimum = $("#minimum").val();
         var Event = {
           title: Title,
@@ -39,6 +39,9 @@ $(document).ready(function() {
         $("#minimum").val(1);
         $("#addModal").modal("hide");
       });
+      $(".cancle").on("click", function() {
+        $("#submit").unbind("click");
+      });
     },
 
     eventClick: function(eventObj) {
@@ -48,8 +51,11 @@ $(document).ready(function() {
         $("#delete").unbind("click");
         $("#deleteModal").modal("hide");
       });
+      $(".cancle").on("click", function() {
+        $("#delete").unbind("click");
+      });
     }
   });
 });
 
-// TODO: 서버연동
+// TODO: 저장기능, 서버연동

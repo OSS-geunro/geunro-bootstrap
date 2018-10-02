@@ -1,5 +1,5 @@
 body {
-  font-family: 'Yeon Sung', cursive;
+  font-family: "Yeon Sung", cursive;
   font-size: 1.4rem;
 }
 
@@ -50,12 +50,12 @@ body {
 }
 
 .fc-time-grid .fc-slats td {
-  height: 1rem ;
+  height: 1rem;
 }
 .fc-slats tr {
   font-size: 0.7rem;
   height: 1rem;
 }
-.mid-title{
-    font-size: 1.3rem;
+.mid-title {
+  font-size: 1.3rem;
 }
