@@ -22,7 +22,8 @@
       <!-- 사이드바 -->
       <nav class="col-2 bg-light sidebar border-right">
         <div class="sidebar-sticky">
-          <ul class="nav flex-column"><li class="nav-item">
+          <ul class="nav flex-column">
+            <li class="nav-item">
               <a class="nav-link" href="./main.html">Main</a>
             </li>
             <li class="nav-item">
@@ -130,12 +131,20 @@
           </button>
         </div>
         <div class="modal-body">
+          <div id="danger" class="collapse alert alert-danger" role="alert">
+            <strong>이미 사용중인 이름입니다.</strong>
+          </div>
           <form>
             <div class="form-group">
               <label for="work-name" class="col-form-label">시간표 이름:</label>
               <input type="text" value="시간표" name="table-name" class="form-control" id="table_name">
+              <label for="work-name" class="col-form-label">학생목록:</label>
+              <input type="text" class="form-control" name="StudentID" id="student_id">
             </div>
           </form>
+
+          <div id="addbutton" class="btn btn-primary">추가</div>
+          <ul id="idlist" class="list-group list-group-flush"></ul>
         </div>
         <div class="modal-footer">
           <button type="button" class="cancle btn btn-secondary" data-dismiss="modal">취소</button>
