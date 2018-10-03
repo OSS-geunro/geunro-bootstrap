@@ -53,9 +53,22 @@
       </nav>
 
       <!-- 내용 -->
-      <main role="main" class="col-10 ml-auto">
+      <main role="main" id="content" class="col-10 ml-auto">
         <h1>시간표 제작</h1><br>
         <text>-근로 시간표 완성본-</text>
+        <table class="table">
+          <thead>
+            <tr>
+              <td>이름</td>
+              <td>제줄현황</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </thead>
+          <tbody id="worktable-list">
+          </tbody>
+        </table>
       </main>
     </div>
   </div>
@@ -66,6 +79,7 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
+  <script src="./asset/js/workTable.js"></script>
 
 </body>
 

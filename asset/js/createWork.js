@@ -14,7 +14,7 @@ $(document).ready(function() {
     slotLabelFormat: "hh:mm",
     minTime: "09:00:00",
     maxTime: "18:00:00",
-    slotDuration: "00:05:00",
+    slotDuration: "00:10:00",
     slotLabelInterval: "00:30",
     slotEventOverlap: false,
     event: data,
