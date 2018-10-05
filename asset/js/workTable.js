@@ -35,14 +35,17 @@ $(document).ready(function() {
   });
   $("table").on("click", "button", function(e) {
     var table = e.target.id
-    var data = { worktable: table };
-    console.log(data)
+    var data = { worktable: table }
+    
     $.ajax({
-      url: "http://0.0.0.0:5009/api/work/access",
+      url: "http://0.0.0.0:5009/api/work/getid",
       type: "post",
       data: data,
       success: function(data) {
-        alert("호우")
+        
+        var url = "./access.html" + "?id=" + data;
+        
+        $(location).attr('href',url)
       },
       error: function(xhr, option, error) {
         alert("?")

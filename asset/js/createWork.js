@@ -119,6 +119,7 @@ $(document).ready(function() {
   $(".cancle").on("click", function() {
     $("#submit").unbind("click");
     $("#delete").unbind("click");
+    $("#save").unbind("click");
     IDs = [];
   });
 
