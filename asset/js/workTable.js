@@ -17,23 +17,26 @@ $(document).ready(function() {
           row = row.concat(student);
         });
         if(work.allCount == work.existCount){
-          btn = '<button id="' +work.workName+ '" type="submit" class="worktable btn btn-primary">보기</button>';
+          btn = '<button id="' +work.workName+ '" type="submit" class="access-table worktable btn btn-primary">보기</button>';
         }
         else{
-          btn = '<button id="' +work.workName+ '" type="submit" class="worktable btn btn-primary" disabled>사용불가</button>';
+          btn = '<button class="worktable btn btn-primary" disabled>사용불가</button>';
         }
 
         var workrow = '<tr class="">'
                       + '<td>' + work.workName + '</td>'
                       + '<td>' + work.existCount + "/" + work.allCount + '</td>'
                       + '<td><table><tbody>' + row + '</tbody></table></td>'
-                      + '<td>' + btn + '</td>'
+                      + '<td>' 
+                          + btn 
+                          + '<button id="' +work.workName+ '" type="submit" class="delete-table worktable btn btn-danger">삭제</button>'
+                      + '</td>'
                     + '</tr>';
         $('#worktable-list').append(workrow);
       });
     }
   });
-  $("table").on("click", "button", function(e) {
+  $("table").on("click", ".access-table", function(e) {
     var table = e.target.id
     var data = { worktable: table }
     
@@ -49,6 +52,23 @@ $(document).ready(function() {
       },
       error: function(xhr, option, error) {
         alert("?")
+      }
+    });
+  });
+
+  $("table").on("click", ".delete-table", function(e) {
+    var table = e.target.id
+    var data = { worktable: table }
+    
+    $.ajax({
+      url: "http://0.0.0.0:5009/api/work/delete",
+      type: "post",
+      data: data,
+      success: function() {
+        $("#reload").load(location.href + " #reload");
+      },
+      error: function(xhr, option, error) {
+        $("#reload").load(location.href + " #reload");
       }
     });
   });

@@ -94,7 +94,6 @@ $(document).ready(function() {
         alert("한 개 이상의 업무를 추가해주세요!");
       } else {
         // 서버 전송
-        alert(IDs);
         $.ajax({
           url: "http://0.0.0.0:5009/api/work/add",
           type: "post",
@@ -109,6 +108,7 @@ $(document).ready(function() {
             else if (xhr.status == 201) {
               $("#submit").unbind("click");
               $("#submitModal").modal("hide");
+              $(location).attr('href','./maker.html')
             }
           }
         });
