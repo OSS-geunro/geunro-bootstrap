@@ -1,0 +1,115 @@
+/*!
+ * Start Bootstrap - Stylish Portfolio v5.0.1 (https://startbootstrap.com/template-overviews/stylish-portfolio)
+ * Copyright 2013-2018 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-stylish-portfolio/blob/master/LICENSE)
+ */
+body,html{
+    width:100%;
+    height:100%
+}
+body{
+    font-family:'Source Sans Pro'
+}
+.btn-xl{
+    padding:1.25rem 2.5rem
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight:700
+}
+.text-faded{
+    color:rgba(255,255,255,.7)
+}
+.map{
+    height:30rem
+}
+@media (max-width:992px){
+    .map{height:75%}
+}
+.map iframe{
+    pointer-events:none
+}
+.scroll-to-top{
+    position:fixed;
+    right:15px;
+    bottom:15px;
+    display:none;
+    width:50px;
+    height:50px;
+    text-align:center;
+    color:#fff;
+    background:rgba(52,58,64,.5);
+    line-height:45px
+}
+.scroll-to-top:focus,.scroll-to-top:hover{
+    color:#fff
+}
+.scroll-to-top:hover{
+    background:#343a40
+}
+.scroll-to-top i{
+    font-weight:800
+}
+.masthead{
+    min-height:30rem;
+    position:relative;
+    display:table;
+    width:100%;
+    height:auto;
+    padding-top:15rem;
+    padding-bottom:8rem;
+    background:-webkit-gradient(linear,left top,right top,from(rgba(255,255,255,.1)),to(rgba(255,255,255,.1))),url(../img/bg-masthead.jpg);
+    background:linear-gradient(90deg,rgba(255,255,255,.1) 0,rgba(255,255,255,.1) 100%),url(../img/bg-masthead.jpg);
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover
+}
+.masthead h1{
+    font-size:4rem;
+    margin:0;
+    padding:0
+}
+@media (min-width:992px){
+    .masthead{
+        height:100vh
+    }
+    .masthead h1{
+        font-size:5.5rem
+    }
+}
+a{
+    color:#1d809f
+}
+a:active,a:focus,a:hover{
+    color:#155d74
+}
+.btn-primary{
+    background-color:#1d809f!important;
+    border-color:#1d809f!important;
+    color:#fff!important
+}
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover{
+    background-color:#155d74!important;
+    border-color:#155d74!important
+}
+.btn-secondary{
+    background-color:#ecb807!important;border-color:#ecb807!important;
+    color:#fff!important
+}
+.btn-secondary:active,
+.btn-secondary:focus,
+.btn-secondary:hover{
+    background-color:#ba9106!important;
+    border-color:#ba9106!important
+}
+.btn-dark{
+    color:#fff!important
+}
+.btn{
+    -webkit-
+    box-shadow:0 3px 3px 0 rgba(0,0,0,.1);
+    box-shadow:0 3px 3px 0 rgba(0,0,0,.1);
+    font-weight:700
+}
+
