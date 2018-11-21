@@ -8,14 +8,14 @@ body,html{
     height:100%
 }
 body{
-    font-family:'Source Sans Pro'
+    font-family: 'Black Han Sans', sans-serif;
 }
 .btn-xl{
     padding:1.25rem 2.5rem;
     border-radius: 0.5rem;
 }
 h1,h2,h3,h4,h5,h6{
-    font-weight:700
+    font-weight:10
 }
 .text-faded{
     color:rgba(255,255,255,.7)
@@ -28,27 +28,6 @@ h1,h2,h3,h4,h5,h6{
 }
 .map iframe{
     pointer-events:none
-}
-.scroll-to-top{
-    position:fixed;
-    right:15px;
-    bottom:15px;
-    display:none;
-    width:50px;
-    height:50px;
-    text-align:center;
-    color:#fff;
-    background:rgba(52,58,64,.5);
-    line-height:45px
-}
-.scroll-to-top:focus,.scroll-to-top:hover{
-    color:#fff
-}
-.scroll-to-top:hover{
-    background:#343a40
-}
-.scroll-to-top i{
-    font-weight:800
 }
 .masthead{
     min-height:30rem;
@@ -111,6 +90,6 @@ a:active,a:focus,a:hover{
     -webkit-
     box-shadow:0 3px 3px 0 rgba(0,0,0,.1);
     box-shadow:0 3px 3px 0 rgba(0,0,0,.1);
-    font-weight:700
+    font-weight:10
 }
 
